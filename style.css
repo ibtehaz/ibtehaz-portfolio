@@ -1,15 +1,16 @@
 /* CSS Variables */
 :root {
-    --primary-color: #BFB096;
-    --secondary-color: #555;
-    --background-color: #fff;
+    --primary-color: #8C7B75; /* Soft brown */
+    --secondary-color: #5A5A5A; /* Dark gray */
+    --background-color: #F2EFEA; /* Light beige */
+    --accent-color: #bdd1c1; /* Soft green */
+    --text-color: #333;
+    --hover-color: #6B8E23; /* Olive green */
     --font-size-large: 1.5rem;
     --font-size-medium: 1rem;
     --padding: 20px;
     --margin-bottom: 20px;
     --border-color: #dcdad5;
-    --hover-color: #007acc;
-    --text-color: #333;
     --background-light: #f7f5f2;
     --background-dark: #f5f3f0;
 }
@@ -21,12 +22,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: var(--background-dark);
     color: var(--text-color);
+    
 }
+
 
 /* Container */
 .container {
@@ -39,15 +46,21 @@ body {
 
 /* Header Styles */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: var(--background-light);
     padding: var(--padding) 0;
     border-bottom: 2px solid var(--border-color);
 }
 
+
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -56,11 +69,14 @@ header {
     color: #2d2d2d;
 }
 
+
+
 /* Navbar Styles */
 .navbar {
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -81,14 +97,20 @@ header {
 
 /* Section Styles */
 section {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: var(--text-color);
+    margin-top: 40px; 
+    margin-bottom: 30px; 
+    color: var(--primary-color); 
+    font-weight: 600; /* Slightly bolder font weight */
+    font-size: 2rem;
+    position: relative; 
 }
+
+
 
 /* About Section */
 #about p {
@@ -119,6 +141,12 @@ h2 {
     padding: var(--padding);
     margin-bottom: var(--margin-bottom);
     border-left: 4px solid #9ab7b4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project h3 {
@@ -225,6 +253,8 @@ footer {
         display: none;
     }
 
+    
+
     /* Adjust section padding for mobile */
     section {
         padding: 20px 10px;
@@ -249,16 +279,56 @@ footer {
 .view-on-github {
     margin-top: 20px;
     padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-    color: #333;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px; 
+    background-color: var(--background-color);
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .view-on-github:hover {
-    background-color: #e0e0e0;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: var(--primary-color);
+    z-index: 1001;
+    transition: width 0.25s ease-out;
+}
+
+/* Quote Styles */
+
+.quote {
+    font-family: 'Playfair Display', serif; /* Elegant font for the quote */
+    font-style: italic;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin-top: 30px;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quote-author {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    text-align: right;
+    font-style: normal;
 }

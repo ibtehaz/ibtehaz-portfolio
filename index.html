@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Ibtehaz Utsay, a computer scientist passionate about leveraging technology for positive change.">
     <meta name="keywords" content="Ibtehaz Utsay, computer science, portfolio, projects, experience">
-    <title>Ibtehaz Utsay - Portfolio</title>
+    <title>Ibtehaz Utsay</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -29,6 +29,7 @@
             </nav>
         </div>
     </header>
+    <div id="progress-bar"></div>
     
 
     <main>
@@ -45,6 +46,10 @@
                 <p>
                     Beyond my technical pursuits, I'm equally passionate about education. I've dedicated significant time to mentoring students, especially in underserved communities, believing that knowledge is a powerful catalyst for personal and societal transformation.
                 </p>
+                <blockquote class="quote">
+                    A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.
+                    <span class="quote-author">- Alan Turing</span>
+                </blockquote>
             </div>
         </section>
 
@@ -165,8 +170,22 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Ibtehaz Utsay</p>
+           
         </div>
+        
     </footer>
+  
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            const progressBar = document.getElementById('progress-bar');
+            const totalHeight = document.body.scrollHeight - window.innerHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+
+        
+        </script>
 </body>
 
 </html>
