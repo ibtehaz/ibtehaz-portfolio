@@ -102,8 +102,8 @@ section {
 
 h2 {
     text-align: center;
-    margin-top: 40px; 
-    margin-bottom: 30px; 
+    margin-top: 20px; 
+    margin-bottom: 25px; 
     color: var(--primary-color); 
     font-weight: 600; /* Slightly bolder font weight */
     font-size: 2rem;
@@ -241,31 +241,29 @@ footer {
     color: #777;
 }
 
-/* Responsive Styles - Hide Navbar on Mobile */
-@media (max-width: 768px) {
+/* Responsive Styles - Hide Navbar on Mobile and Tablets */
+@media (max-width: 1024px) {
     .header-container {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Hide the navbar on mobile screens */
+    /* Hide the navbar on mobile and tablet screens */
     .navbar {
         display: none;
     }
 
-    
-
-    /* Adjust section padding for mobile */
+    /* Adjust section padding for mobile and tablets */
     section {
         padding: 20px 10px;
     }
 
     h2 {
-        font-size: 1.8rem; /* Smaller font size for mobile */
+        font-size: 1.8rem; /* Smaller font size for mobile and tablets */
     }
 
     #about p, .project h3, .job h3, .education-item h3 {
-        font-size: var(--font-size-medium); /* Smaller text size for mobile */
+        font-size: var(--font-size-medium); /* Smaller text size for mobile and tablets */
         line-height: 1.5;
     }
 
@@ -274,7 +272,14 @@ footer {
         width: 95%;
         padding: 0 10px;
     }
+
+    .logo {
+        font-size: 24px; /* Slightly smaller logo font size */
+    }
 }
+
+
+
 
 .view-on-github {
     margin-top: 20px;
