@@ -173,6 +173,7 @@ footer {
 }
 
 /* Experience Section */
+/* Experience Section */
 .job {
     background-color: var(--background-color);
     padding: var(--padding);
@@ -193,9 +194,27 @@ footer {
 }
 
 .job ul {
-    list-style: disc;
-    padding-left: 20px;
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
     line-height: 1.5;
+}
+
+.job ul li {
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+    margin-bottom: 10px;
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+}
+
+.job ul li::before {
+    content: '\f058'; /* Font Awesome check icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1rem;
 }
 
 /* Education Section */
@@ -217,19 +236,44 @@ footer {
 }
 
 /* Contact Section */
+/* Contact Section */
+#contact {
+    background-color: var(--background-light);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
 #contact p {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--text-color);
 }
 
 #contact a {
     color: var(--hover-color);
     text-decoration: none;
+    margin-left: 10px;
 }
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+#contact i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
 }
 
 /* Footer Styles */
